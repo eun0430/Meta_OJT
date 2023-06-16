@@ -16,15 +16,12 @@ provider "azurerm" {
     }
   }
 
-  subscription_id = "824024c8-274a-45e9-ac9e-8e4d6ea796d1"       # subscription_id : Azure 구독 계정
-  tenant_id = "e6352ace-f5d6-430d-af0c-b02699765d3f"             # tenant_id :  현재 구독되어있는 Azure Directory(Tenant)
+  subscription_id = ""       # subscription_id : Azure 구독 계정
+  tenant_id = ""             # tenant_id :  현재 구독되어있는 Azure Directory(Tenant)
 
   # app registrations (앱 등록 정보 관리) 생성 -> client_id, client_secret 기입
 }
 
-# data "azurerm_subscription" "name" {
-#   subscription_id = "824024c8-274a-45e9-ac9e-8e4d6ea796d1"
-# }
 
 resource "azurerm_resource_group" "test" {
   name = "${var.name}-rg"
